@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+    <title>穿越童年</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 640px;
+            margin: 0 auto;
+            font-size: 0;
+            position: relative;
+        }
+
+        .container .qCode {
+            position: absolute;
+            width: 320px;
+            height: 230px;
+            left: 50%;
+            margin-left: -160px;
+            top: 600px;
+            display: none;
+        }
+        .loading{background-color:#000;position:fixed;left:0;top:0;width:100%;height:1136px;}
+        .loading table{width:100%;height:100%;}
+        .loading table td{height:100%;text-align:center;}
+        .sound{width:105px; height:105px; background:url(images/sound.png) no-repeat 0 0;display:block;}
+        .sound.off{background-position:0 -105px;}
+        .container .sound{position:absolute;right:20px;top:20px;}
+    </style>
+    <script src="createjs-2015.11.26.min.js"></script>
+    <script src="sc2.js?v03"></script>
+
+    <!-- write your code here -->
+
+</head>
+<body onload="init();" style="background-color:#D4D4D4;margin:0px;">
+<div class="container">
+    <canvas id="canvas" width="640" height="1136" style="background-color:#FFFFFF"></canvas>
+    <img src="images/mailmm.png" alt="" id="qCode" class="qCode">
+    <i class="sound" id="soundBtn"></i>
+</div>
+<div class="loading" id="loading">
+    <table>
+        <tr>
+            <td>
+                <svg width='80px' height='80px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-squares"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><rect x="15" y="15" width="20" height="20" fill="#ffffff" class="sq"><animate attributeName="fill" from="#ffffff" to="#ffb82e" repeatCount="indefinite" dur="1s" begin="0s" values="#ffb82e;#ffb82e;#ffffff;#ffffff" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="40" y="15" width="20" height="20" fill="#ffffff" class="sq"><animate attributeName="fill" from="#ffffff" to="#ffb82e" repeatCount="indefinite" dur="1s" begin="0.125s" values="#ffb82e;#ffb82e;#ffffff;#ffffff" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="65" y="15" width="20" height="20" fill="#ffffff" class="sq"><animate attributeName="fill" from="#ffffff" to="#ffb82e" repeatCount="indefinite" dur="1s" begin="0.25s" values="#ffb82e;#ffb82e;#ffffff;#ffffff" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="15" y="40" width="20" height="20" fill="#ffffff" class="sq"><animate attributeName="fill" from="#ffffff" to="#ffb82e" repeatCount="indefinite" dur="1s" begin="0.875s" values="#ffb82e;#ffb82e;#ffffff;#ffffff" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="65" y="40" width="20" height="20" fill="#ffffff" class="sq"><animate attributeName="fill" from="#ffffff" to="#ffb82e" repeatCount="indefinite" dur="1s" begin="0.375s" values="#ffb82e;#ffb82e;#ffffff;#ffffff" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="15" y="65" width="20" height="20" fill="#ffffff" class="sq"><animate attributeName="fill" from="#ffffff" to="#ffb82e" repeatCount="indefinite" dur="1s" begin="0.75s" values="#ffb82e;#ffb82e;#ffffff;#ffffff" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="40" y="65" width="20" height="20" fill="#ffffff" class="sq"><animate attributeName="fill" from="#ffffff" to="#ffb82e" repeatCount="indefinite" dur="1s" begin="0.625s" values="#ffb82e;#ffb82e;#ffffff;#ffffff" keyTimes="0;0.1;0.2;1"></animate></rect><rect x="65" y="65" width="20" height="20" fill="#ffffff" class="sq"><animate attributeName="fill" from="#ffffff" to="#ffb82e" repeatCount="indefinite" dur="1s" begin="0.5s" values="#ffb82e;#ffb82e;#ffffff;#ffffff" keyTimes="0;0.1;0.2;1"></animate></rect></svg>
+                <br/>
+                <img src="images/loading.png" alt="">
+            </td>
+        </tr>
+    </table>
+</div>
+<audio id="musicfx" loop="loop" autoplay="autoplay">
+    <source src="music/bgm01.mp3" type="audio/mpeg">
+</audio>
+</body>
+<script>
+
+
+</script>
+</html>
